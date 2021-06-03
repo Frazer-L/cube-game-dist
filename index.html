@@ -5,29 +5,46 @@
     <link href="data:null;base64,AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAByAP9WAMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAByAP9yAP9yAP9WAMFWAMFWAMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAByAP9yAP9yAP9yAP9WAMFWAMFWAMFWAMEAAAAAAAAAAAAAAAAAAAAAAAByAP9yAP9yAP9yAP9yAP9yAP9WAMFWAMFWAMFWAMFWAMFWAMEAAAAAAAAAAAAAAAByAP9yAP9yAP9yAP9yAP9yAP9WAMFWAMFWAMFWAMFWAMFWAMEAAAAAAAAAAAAAAAByAP9yAP9yAP9yAP9yAP9yAP9WAMFWAMFWAMFWAMFWAMFWAMEAAAAAAAAAAAAAAAByAP9yAP9yAP9yAP9yAP9yAP9WAMFWAMFWAMFWAMFWAMFWAMEAAAAAAAAAAAAAAAByAP9yAP9yAP9yAP9yAP+XR/tWAMFWAMFWAMFWAMFWAMFWAMEAAAAAAAAAAAAAAAByAP9yAP9yAP9yAP+XR/uXR/uXR/uXR/tWAMFWAMFWAMFWAMEAAAAAAAAAAAAAAAByAP9yAP+XR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/tWAMFWAMEAAAAAAAAAAAAAAACXR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/tWAMEAAAAAAAAAAAAAAAAAAACXR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/uXR/sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACXR/uXR/uXR/uXR/uXR/uXR/sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACXR/uXR/uXR/uXR/sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA/n8AAPgfAADwDwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADgBwAA+B8AAPw/AAD//wAA" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cube Gam</title>
-  <script type="module" crossorigin src="/assets/index.36fa9f38.js"></script>
-  <link rel="stylesheet" href="/assets/index.9492e0ff.css">
+  <script type="module" crossorigin src="/assets/index.d77c6345.js"></script>
+  <link rel="stylesheet" href="/assets/index.7196bc52.css">
 </head>
   <body>
 
     <canvas id="bg"></canvas>   
 
     <main>
-      <header id="score-header">
+      <div id="score-header" class="header">
         <h1 id="score">0</h1>
-      </header>
-      <header class="center" id="start-header">
-        <h5 style="margin: 0">Click to start</h5>
-        <h6 id="guide-text" style="margin: 0">Keep your mouse on the cubes at all times. Visit as many cubes as you can!</h6>
-        <!-- <h6 style="margin: 0" id="your-high-score">Your High Score: </h6> -->
+      </div>
+      <div class="center header" id="start-header">
         
-      </header>
-      <header class="center" id="game-over-header" style="display:none">
-        <h5 style="margin: 0">Game Over!</h5>
-        <h6 style="margin: 0" id="your-score">Your Score: </h6>
-        <h6 style="margin: 0" id="your-high-score">Your High Score: </h6>
-        <h6 id="restart" style="margin: 0">Click to restart</h6>
-      </header>
+      <span id="close"> </span>
+        <h1 style="margin: 0">Click anywhere to start</h1>
+        <h2 id="guide-text" style="margin: 0">Keep your mouse on the cubes at all times and visit as many as you can!</h2>
+        <!-- <h6 style="margin: 0" id="your-high-score">Your High Score: </h6> -->
+        <div id="dropdown" class="dropdown">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" fill="grey" class="bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        <div id="dropdown-content" class="dropdown-content"  style='display:none'>
+          <a class="xyz" id="theme1" style="display: block">Theme 1</a>
+          <a class="xyz" id="theme2" style="display: none">Theme 2</a>
+          <a class="xyz" id="theme3" style="display: none">Theme 3</a>
+          <a class="xyz" id="theme4" style="display: none">Theme 4</a>
+          <a class="xyz" id="theme5" style="display: none">Theme 5</a>
+          <a class="xyz" id="theme6" style="display: none">Theme 6</a>
+          <a id="cubesUntilNextThemeUnlock">Next theme unlocked: 16789/25000</a>
+
+        </div>
+      </div>
+        
+    </div>
+      <div class="center header" id="game-over-header" style="display:none">
+        <h1 id="game-over-text">Game Over!</h1>
+        <h2 style="margin: 0" id="your-score">Your Score: </h2>
+        <h2 style="margin: 0" id="your-high-score">Your High Score: </h2>
+        <h2 id="restart">Click to restart</h2>
+      </div>
 
     </main>
     
